@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep Cloner for Salesforce</title>
+  <meta name="description" content="Deep-clone a Salesforce record together with the related records you pick, straight from the Actions menu.">
+  <style>
+    :root { --fg:#1b2733; --muted:#5b6b7a; --bg:#fff; --accent:#0176d3; --line:#e1e6eb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg:#e8edf2; --muted:#9aa9b8; --bg:#121820; --accent:#4aa3f0; --line:#2a3541; }
+    }
+    body { margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--fg); background:var(--bg); }
+    main { max-width:720px; margin:0 auto; padding:48px 16px; }
+    h1 { font-size:2rem; margin:0 0 8px; }
+    h2 { font-size:1.25rem; margin:36px 0 8px; }
+    p.lead { font-size:1.15rem; color:var(--muted); margin:0 0 24px; }
+    a { color:var(--accent); }
+    ul { padding-left:20px; }
+    footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Deep Cloner</h1>
+  <p class="lead">Deep-clone a Salesforce record together with the related records you pick, from a button in the record's Actions menu.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Lazy tree of child objects, up to 4 levels deep.</li>
+    <li>References between cloned records are remapped automatically.</li>
+    <li>Everything rolls back if any record fails.</li>
+    <li>Runs in user mode: the user's CRUD, field-level security and sharing always apply.</li>
+    <li>Search and sort the related objects, and select every match at once.</li>
+    <li>Live count of the records a clone will create, checked against your limit before you click Clone.</li>
+    <li>Saved selections: apply a favourite choice in one click.</li>
+    <li>Files and Notes: link the same files to the copy, or duplicate them.</li>
+    <li>Clone several records at once from a list view.</li>
+    <li>Deep Clone tab: choose an object and a record without any page layout change.</li>
+    <li>Admin settings: maximum records per clone and a list of excluded objects.</li>
+  </ul>
+
+  <h2>Permission sets</h2>
+  <ul>
+    <li><strong>Deep Cloner User</strong>: use the Deep Clone quick action.</li>
+    <li><strong>Deep Cloner Admin</strong>: everything above, plus the Deep Cloner app and its settings.</li>
+  </ul>
+
+  <h2>Add the button to any object</h2>
+  <p>Setup &rarr; Object Manager &rarr; your object &rarr; Buttons, Links, and Actions &rarr; New Action &rarr; type <em>Lightning Web Component</em> &rarr; <code>c:deepCloner</code>, then add it to the page layout.</p>
+
+  <h2>Support</h2>
+  <p>
+  Contact: <a href="mailto:davidkaz2005@gmail.com">davidkaz2005@gmail.com</a></p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> &middot; Deep Cloner is not affiliated with or endorsed by Salesforce, Inc.
+  </footer>
+</main>
+</body>
+</html>
